@@ -11,7 +11,7 @@
 <meta property="og:image" content="https://simbastudiovn.github.io/noel/chia-se.jpg">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <link rel="icon" href="logo-den.png">
-<meta name="description" content="Chụp ảnh gia đình concept Giáng sinh tại Simba Studio Hà Nội, ưu đãi giảm 30% mọi gói gia đình, chỉ từ 1.049.000đ: concept dựng sẵn, makeup, trang phục Noel cho cả nhà, toàn bộ ảnh gốc fullsize.">
+<meta name="description" content="Chụp ảnh gia đình concept Giáng sinh tại Simba Studio Hà Nội, ưu đãi giảm 30% mọi gói gia đình và gói riêng cho bé, chỉ từ 1.049.000đ: concept dựng sẵn, makeup, trang phục Noel cho cả nhà, toàn bộ ảnh gốc fullsize.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Montserrat:wght@400;500;600;700&display=swap&subset=vietnamese">
@@ -132,6 +132,10 @@ a{color:inherit}
 .goi .noi li::before{color:var(--gung)}
 .goi .huy{position:absolute;top:-13px;right:22px;background:var(--gung);color:var(--nau-dem);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:5px 12px;border-radius:999px}
 .goi .nut{width:100%}
+.kid-dau{margin-top:44px;display:grid;gap:6px}
+.kid-dau h3{font-size:26px}
+.kid-dau p{color:var(--muc-nhat);font-size:15px;max-width:40em}
+.goi.goi-kid{grid-template-columns:repeat(2,minmax(0,1fr));margin-top:20px;max-width:820px}
 .goi-ghi{margin-top:24px;display:grid;gap:4px;font-size:14px;color:var(--muc-nhat)}
 
 /* A — Hành động */
@@ -176,6 +180,8 @@ a{color:inherit}
   .hero .wrap,.hanh .wrap{grid-template-columns:1fr;gap:32px}
   .hero-anh{max-width:520px;margin-inline:auto;width:100%}
   .goi{grid-template-columns:1fr;max-width:520px;margin-inline:auto}
+  .goi.goi-kid{grid-template-columns:1fr;max-width:520px;margin-inline:auto}
+  .kid-dau{max-width:520px;margin-inline:auto}
   .album-luoi{grid-template-columns:repeat(2,minmax(0,1fr))}
   .hanh-anh{display:none}
   .chan .wrap{grid-template-columns:1fr}
@@ -292,12 +298,12 @@ a{color:inherit}
     <div class="khoi-dau">
       <span class="nhan">Bảng giá gói gia đình</span>
       <h2>Chọn gói hợp với nhà mình</h2>
-      <p>Gói nào cũng chụp được concept Noel và giao toàn bộ ảnh gốc fullsize, đủ để in lịch, làm thiệp hay gửi ông bà.</p>
+      <p>Bé mấy tuổi cũng chụp Noel cùng cả nhà được. Gói nào cũng chụp được concept Noel và giao toàn bộ ảnh gốc fullsize, đủ để in lịch, làm thiệp hay gửi ông bà.</p>
     </div>
     <div class="goi">
       <article>
         <span class="huy">−30% tháng này</span>
-        <div class="ten"><h3>Small Family</h3><span class="ai">Gia đình nhỏ: tối đa 2 người lớn và các bé</span></div>
+        <div class="ten"><h3>Small Family</h3><span class="ai">Gia đình nhỏ: tối đa 2 người lớn và các bé, bé mọi lứa tuổi</span></div>
         <div class="gia"><s>1.499.000đ</s>1.049.000đ</div>
         <ul>
           <li>1 concept gia đình</li>
@@ -310,7 +316,7 @@ a{color:inherit}
       </article>
       <article class="noi">
         <span class="huy">Bán chạy · −30%</span>
-        <div class="ten"><h3>Family Plus</h3><span class="ai">Cho nhà có bé 3 tháng – 4 tuổi</span></div>
+        <div class="ten"><h3>Family Plus</h3><span class="ai">Cả nhà + 1 concept riêng cho bé 3 tháng – 4 tuổi</span></div>
         <div class="gia"><s>2.199.000đ</s>1.539.000đ</div>
         <ul>
           <li>1 concept riêng cho bé + 1 concept gia đình</li>
@@ -323,7 +329,7 @@ a{color:inherit}
       </article>
       <article>
         <span class="huy">−30% tháng này</span>
-        <div class="ten"><h3>Baby Advance</h3><span class="ai">Cho nhà có bé 3 tháng – 4 tuổi, muốn nhiều ảnh riêng của bé</span></div>
+        <div class="ten"><h3>Baby Advance</h3><span class="ai">Cả nhà + 2 concept riêng cho bé 3 tháng – 4 tuổi</span></div>
         <div class="gia"><s>2.599.000đ</s>1.819.000đ</div>
         <ul>
           <li>2 concept riêng cho bé + 1 concept gia đình nhỏ</li>
@@ -336,8 +342,41 @@ a{color:inherit}
         <a class="nut nut-vien" href="https://m.me/simbastudiovn" target="_blank" rel="noopener">Giữ lịch gói này</a>
       </article>
     </div>
+    <div class="kid-dau">
+      <h3>Gói riêng cho bé lớn, từ 4 tuổi</h3>
+      <p>Bé đã lớn muốn có bộ ảnh của riêng mình: chụp riêng cho bé, hoặc ghép thêm vào gói gia đình. Ba mẹ nhắn Simba để chọn concept hợp với bé.</p>
+    </div>
+    <div class="goi goi-kid">
+      <article>
+        <span class="huy">−30% tháng này</span>
+        <div class="ten"><h3>Beauty Kid 1</h3><span class="ai">Bé từ 4 tuổi · chụp 30–45 phút</span></div>
+        <div class="gia"><s>1.499.000đ</s>1.049.000đ</div>
+        <ul>
+          <li>1 concept, 1 trang phục cho bé</li>
+          <li>Makeup, làm tóc cho bé</li>
+          <li>5 ảnh chỉnh</li>
+          <li>1 ảnh gỗ 20×30</li>
+          <li>Toàn bộ ảnh gốc JPG fullsize</li>
+        </ul>
+        <a class="nut nut-vien" href="https://m.me/simbastudiovn" target="_blank" rel="noopener">Giữ lịch gói này</a>
+      </article>
+      <article>
+        <span class="huy">−30% tháng này</span>
+        <div class="ten"><h3>Beauty Kid 2</h3><span class="ai">Bé từ 4 tuổi · chụp 1,5–2 tiếng</span></div>
+        <div class="gia"><s>2.699.000đ</s>1.889.000đ</div>
+        <ul>
+          <li>2 concept, 2 trang phục cho bé</li>
+          <li>Makeup, làm tóc cho bé</li>
+          <li>10 ảnh chỉnh</li>
+          <li>1 ảnh gỗ 20×30</li>
+          <li>Toàn bộ ảnh gốc JPG fullsize</li>
+        </ul>
+        <a class="nut nut-vien" href="https://m.me/simbastudiovn" target="_blank" rel="noopener">Giữ lịch gói này</a>
+      </article>
+    </div>
     <div class="goi-ghi">
-      <span>Ưu đãi giảm 30% áp dụng cho cả 3 gói khi ba mẹ đặt lịch trong tháng 11/2026: Small Family 1.499.000đ còn 1.049.000đ, Family Plus 2.199.000đ còn 1.539.000đ, Baby Advance 2.599.000đ còn 1.819.000đ.</span>
+      <span>Ưu đãi giảm 30% áp dụng cho cả 5 gói khi ba mẹ đặt lịch trong tháng 11/2026: Small Family 1.499.000đ còn 1.049.000đ, Family Plus 2.199.000đ còn 1.539.000đ, Baby Advance 2.599.000đ còn 1.819.000đ, Beauty Kid 1 1.499.000đ còn 1.049.000đ, Beauty Kid 2 2.699.000đ còn 1.889.000đ.</span>
+      <span>Nhà có nhiều bé khác tuổi (ví dụ một bé 1 tuổi và một bé 5 tuổi), ba mẹ nhắn tuổi các bé, Simba gợi ý cách ghép gói hợp nhất.</span>
       <span>Giá chưa gồm VAT 8% và phí ship ảnh. Chụp thứ Bảy, Chủ nhật phụ thu 200.000đ cho mọi gói.</span>
     </div>
   </div>
@@ -363,9 +402,9 @@ a{color:inherit}
         <p>Nơ đỏ khổng lồ, cây thông, hộp quà, gấu bông. Cả nhà chỉ việc bước vào khung hình.</p>
       </article>
       <article>
-        <div class="lo"><i>Lo:</i> «Bé còn nhỏ thế, chụp có được không?»</div>
-        <h3>Chụp bé là việc chính của Simba</h3>
-        <p>Simba có gói riêng cho bé sơ sinh và bé từ 3 tháng tới 4 tuổi, nên bé nhỏ mấy cũng chụp được.</p>
+        <div class="lo"><i>Lo:</i> «Bé nhà mình nhỏ quá, hoặc lớn rồi, chụp có được không?»</div>
+        <h3>Bé mấy tuổi Simba cũng chụp được</h3>
+        <p>Từ bé sơ sinh tới bé đã đi học đều chụp cùng cả nhà được. Muốn có thêm ảnh riêng thì bé nhỏ có gói concept cho bé, bé lớn có gói Beauty Kid.</p>
       </article>
       <article>
         <div class="lo"><i>Lo:</i> «Chụp xong lại phát sinh thêm tiền»</div>
