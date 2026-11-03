@@ -201,6 +201,8 @@ a{color:inherit}
 .rieng-tu h3{font-family:var(--f-than);font-size:14px;font-weight:700;margin:0 0 6px;color:var(--muc)}
 .rieng-tu p{margin:0 0 8px}
 .rieng-tu button{background:none;border:0;padding:0;color:var(--nau);font:600 13px var(--f-than);text-decoration:underline;cursor:pointer}
+.mo-mess{position:fixed;left:12px;right:12px;bottom:calc(80px + env(safe-area-inset-bottom,0px));z-index:27;display:block;text-align:center;background:var(--nau);color:var(--kem);font:600 15px var(--f-than);text-decoration:none;border-radius:999px;padding:14px 16px;box-shadow:0 10px 30px rgba(46,33,26,.3)}
+.mo-mess[hidden]{display:none}
 @media (max-width:640px){.dongy{left:12px;right:12px;bottom:calc(80px + env(safe-area-inset-bottom,0px))}}
 </style>
 </head>
@@ -477,6 +479,28 @@ document.getElementById('chep').addEventListener('click',function(){
     if(!a||!daDongY()||!window.fbq) return;
     var kenh=a.id==='chep'?'hotline':(a.href.indexOf('zalo.me')>=0?'zalo':'messenger');
     fbq('track','Contact',{content_name:kenh},{eventID:maSuKien()});
+  });
+  // Điện thoại: nút Messenger gọi thẳng app (kiểu B, anh Phong thử OK 03/11/2026),
+  // 1,5 giây không mở được app thì quay về m.me như cũ. Máy tính giữ m.me.
+  var dienThoai=/iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  var hen=null;
+  document.addEventListener('visibilitychange',function(){if(document.hidden&&hen){clearTimeout(hen);hen=null;}});
+  window.addEventListener('pagehide',function(){if(hen){clearTimeout(hen);hen=null;}});
+  document.addEventListener('click',function(e){
+    var a=e.target.closest('a[href^="https://m.me/"]');
+    if(!a||!dienThoai) return;
+    e.preventDefault();
+    var cu=a.href;
+    if(hen) clearTimeout(hen);
+    hen=setTimeout(function(){
+      hen=null; if(document.hidden) return;
+      // Có trình duyệt chặn tự chuyển trang sau khi gọi app: hiện thêm nút để khách tự bấm.
+      var n=document.getElementById('mo-mess');
+      if(!n){n=document.createElement('a');n.id='mo-mess';n.className='mo-mess';n.textContent='Chưa mở được? Bấm để nhắn Simba qua Messenger';document.body.appendChild(n);}
+      n.href=cu; n.hidden=false; setTimeout(function(){n.hidden=true;},12000);
+      location.href=cu;
+    },1500);
+    location.href='fb-messenger://user-thread/449534255232300';
   });
 })();
 </script>
