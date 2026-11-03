@@ -6,12 +6,12 @@
 <title>Noel cả nhà Simba</title>
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://simbastudiovn.github.io/noel/">
-<meta property="og:title" content="Noel này, cả nhà mình có một bộ ảnh – chỉ từ 1.499.000đ">
+<meta property="og:title" content="Noel này, cả nhà mình có một bộ ảnh – chỉ còn 1.049.000đ (giảm 30%)">
 <meta property="og:description" content="Concept Giáng sinh dựng sẵn, trang phục Noel cho cả nhà, makeup, toàn bộ ảnh gốc fullsize. Simba Studio Hà Nội.">
 <meta property="og:image" content="https://simbastudiovn.github.io/noel/chia-se.jpg">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <link rel="icon" href="logo-den.png">
-<meta name="description" content="Chụp ảnh gia đình concept Giáng sinh tại Simba Studio Hà Nội, từ 1.499.000đ: concept dựng sẵn, makeup, trang phục Noel cho cả nhà, toàn bộ ảnh gốc fullsize.">
+<meta name="description" content="Chụp ảnh gia đình concept Giáng sinh tại Simba Studio Hà Nội, ưu đãi giảm 30% mọi gói gia đình, chỉ từ 1.049.000đ: concept dựng sẵn, makeup, trang phục Noel cho cả nhà, toàn bộ ảnh gốc fullsize.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Montserrat:wght@400;500;600;700&display=swap&subset=vietnamese">
@@ -63,6 +63,11 @@ a{color:inherit}
 .hero-chu{display:grid;gap:22px;min-width:0}
 .hero h1{font-size:clamp(34px,5.2vw,58px);letter-spacing:-.01em}
 .hero h1 .gia{display:inline-block;font-style:italic;color:var(--nau);border-bottom:6px solid var(--gung);line-height:1.05}
+.gia-cu{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center;margin-top:-8px;font-size:15px;color:var(--muc-nhat)}
+.gia-cu s{font-size:19px;font-weight:600}
+.gia-cu b{background:var(--gung);color:var(--nau-dem);font-size:13px;font-weight:700;letter-spacing:.06em;padding:3px 10px;border-radius:999px}
+.the-gia s{font-size:14px;opacity:.75}
+.goi .gia s{display:block;font-family:var(--f-than);font-size:16px;font-weight:500;color:var(--muc-nhat);margin-bottom:6px}
 .hero-phu{font-size:17px;color:var(--muc-nhat);max-width:34em}
 .loi-ich{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 18px;margin:0;padding:0;list-style:none}
 .loi-ich li{display:flex;gap:10px;align-items:flex-start;font-weight:500;font-size:15px}
@@ -98,7 +103,7 @@ a{color:inherit}
 .ngai p{color:var(--muc-nhat)}
 
 /* Bộ ảnh */
-.album{padding-block:0 80px}
+.album{padding-block:80px}
 .album-luoi{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
 .album-luoi figure{margin:0;display:grid;gap:8px}
 .album-luoi img{width:100%;aspect-ratio:2/3;object-fit:cover;border-radius:12px;display:block;background:var(--be-nhat)}
@@ -120,6 +125,7 @@ a{color:inherit}
 .goi .gia{font-family:var(--f-tieude);font-size:36px;font-weight:700;font-variant-numeric:tabular-nums;line-height:1}
 .goi .gia small{font-family:var(--f-than);font-size:14px;font-weight:500;color:var(--muc-nhat)}
 .goi .noi .gia small{color:var(--be)}
+.goi .noi .gia s{color:var(--be)}
 .goi ul{list-style:none;margin:0;padding:0;display:grid;gap:10px;flex:1}
 .goi li{display:flex;gap:10px;font-size:15px}
 .goi li::before{content:"✓";font-weight:700;color:var(--nau)}
@@ -136,8 +142,14 @@ a{color:inherit}
 .hanh .dem b{font-size:clamp(64px,9vw,110px);line-height:.9;color:var(--gung);font-variant-numeric:tabular-nums}
 .hanh p{color:var(--be);font-size:17px;max-width:34em}
 .hanh-chu{display:grid;gap:20px;min-width:0}
-.lich{display:flex;flex-wrap:wrap;gap:6px;margin:0;padding:0;list-style:none}
-.lich li{font-size:13px;font-weight:600;padding:6px 10px;border-radius:10px;border:1px solid rgba(199,186,166,.4);color:var(--kem);font-variant-numeric:tabular-nums}
+.ngay-chup{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.ngay-chup div{border:1px solid rgba(199,186,166,.35);border-radius:16px;padding:16px 18px;display:grid;gap:8px;align-content:start}
+.ngay-chup div.goi-y{border-color:var(--gung);background:rgba(216,166,106,.1)}
+.ngay-chup h3{font-family:var(--f-than);font-size:16px;font-weight:700;color:var(--kem);display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.ngay-chup h3 span{font-size:11px;letter-spacing:.1em;text-transform:uppercase;background:var(--gung);color:var(--nau-dem);padding:3px 9px;border-radius:999px}
+.ngay-chup ul{margin:0;padding:0;list-style:none;display:grid;gap:6px}
+.ngay-chup li{font-size:14px;color:var(--be);display:flex;gap:8px}
+.ngay-chup li::before{content:"•";color:var(--gung);font-weight:700}
 .hanh-nut{display:flex;flex-wrap:wrap;gap:12px}
 .hotline{display:flex;flex-wrap:wrap;align-items:center;gap:10px;font-size:15px;color:var(--be)}
 .hotline b{color:var(--kem);font-size:20px;letter-spacing:.02em;user-select:all;font-variant-numeric:tabular-nums}
@@ -177,8 +189,10 @@ a{color:inherit}
   .loi-ich{grid-template-columns:1fr}
   .so .wrap{grid-template-columns:repeat(2,minmax(0,1fr))}
   .khoi{padding-block:56px}
+  .album{padding-block:56px}
   .ngai{grid-template-columns:1fr}
   .buoc{grid-template-columns:1fr}
+  .ngay-chup{grid-template-columns:1fr}
   .coso{grid-template-columns:1fr}
   .album-luoi figure:nth-child(n+8){display:none}
   .thanh{display:flex}
@@ -219,8 +233,9 @@ a{color:inherit}
 <section class="hero" id="thu-hut" data-aida="thu-hut">
   <div class="wrap">
     <div class="hero-chu">
-      <span class="nhan">Concept Giáng sinh · Simba Studio Hà Nội</span>
-      <h1>Noel này, cả nhà mình có một bộ ảnh – chỉ từ <span class="gia">1.499.000đ</span></h1>
+      <span class="nhan">Ưu đãi Noel −30% · trong tháng này</span>
+      <h1>Noel này, cả nhà mình có một bộ ảnh – chỉ còn <span class="gia">1.049.000đ</span></h1>
+      <p class="gia-cu"><span>Gói Small Family, giá gốc <s>1.499.000đ</s></span><b>−30%</b></p>
       <p class="hero-phu">Ba mẹ chỉ cần dắt bé tới. Bối cảnh Noel, trang phục, makeup và ảnh gỗ treo tường, nhà Simba đã chuẩn bị sẵn hết.</p>
       <ul class="loi-ich">
         <li>Concept Giáng sinh dựng sẵn</li>
@@ -238,7 +253,7 @@ a{color:inherit}
     </div>
     <figure class="hero-anh">
       <img src="noel-ca-nha-cuoi.jpg" alt="Bố mẹ và bé gái mặc áo len đỏ, ngồi trước chiếc nơ đỏ khổng lồ trong concept Giáng sinh của Simba Studio" fetchpriority="high">
-      <div class="the-gia"><span>Gói Small Family</span><b>1.499.000đ</b></div>
+      <div class="the-gia"><span>Gói Small Family · −30%</span><s>1.499.000đ</s><b>1.049.000đ</b></div>
       <figcaption>Ảnh thật của khách nhà Simba · concept Noel 2026</figcaption>
     </figure>
   </div>
@@ -246,46 +261,14 @@ a{color:inherit}
 
 <div class="so" data-aida="thu-hut">
   <div class="wrap">
-    <div><b>1.499.000đ</b><span>giá gói gia đình nhỏ</span></div>
+    <div><b>1.049.000đ</b><span>gói gia đình nhỏ, đã giảm 30%</span></div>
     <div><b>8 ảnh</b><span>chỉnh kỹ, ảnh gốc giao hết</span></div>
     <div><b>40×60</b><span>ảnh gỗ treo tường kèm trong gói</span></div>
     <div><b>Mọi gói</b><span>đều chọn được concept Noel</span></div>
   </div>
 </div>
 
-<!-- ============ I · THÍCH THÚ ============ -->
-<section class="khoi" id="thich-thu" data-aida="thich-thu">
-  <div class="wrap">
-    <div class="khoi-dau">
-      <span class="nhan">Chụp Noel cả nhà, có gì mà ngại?</span>
-      <h2>Bốn điều ba mẹ hay lo, nhà Simba lo sẵn</h2>
-      <p>Muốn có bộ ảnh Noel đẹp mà nghĩ tới chuyện sắm đồ, tìm góc chụp, lo bé còn nhỏ là đã thấy mệt. Simba gói gọn hết vào một buổi chụp.</p>
-    </div>
-    <div class="ngai">
-      <article>
-        <div class="lo"><i>Lo:</i> «Cả nhà lấy đâu ra đồ Noel đồng bộ?»</div>
-        <h3>Trang phục Noel cho cả nhà có sẵn</h3>
-        <p>Bố, mẹ và bé thay đồ ngay tại studio. Không phải đi sắm, không phải là ủi.</p>
-      </article>
-      <article>
-        <div class="lo"><i>Lo:</i> «Ở nhà chẳng có góc nào ra Noel»</div>
-        <h3>Bối cảnh Giáng sinh dựng sẵn</h3>
-        <p>Nơ đỏ khổng lồ, cây thông, hộp quà, gấu bông. Cả nhà chỉ việc bước vào khung hình.</p>
-      </article>
-      <article>
-        <div class="lo"><i>Lo:</i> «Bé còn nhỏ thế, chụp có được không?»</div>
-        <h3>Chụp bé là việc chính của Simba</h3>
-        <p>Simba có gói riêng cho bé sơ sinh và bé từ 3 tháng tới 4 tuổi, nên bé nhỏ mấy cũng chụp được.</p>
-      </article>
-      <article>
-        <div class="lo"><i>Lo:</i> «Chụp xong lại phát sinh thêm tiền»</div>
-        <h3>Giá trọn gói, biết trước</h3>
-        <p>Makeup, ảnh chỉnh, ảnh gỗ và toàn bộ ảnh gốc đã nằm trong giá gói. Chỉ cộng VAT 8% và phụ thu nhỏ nếu chụp cuối tuần.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
+<!-- ============ I · THÍCH THÚ (album) ============ -->
 <section class="album" data-aida="thich-thu" aria-label="Bộ ảnh Noel ở Simba">
   <div class="wrap">
     <div class="album-luoi">
@@ -313,8 +296,9 @@ a{color:inherit}
     </div>
     <div class="goi">
       <article>
+        <span class="huy">−30% tháng này</span>
         <div class="ten"><h3>Small Family</h3><span class="ai">Gia đình nhỏ: tối đa 2 người lớn và các bé</span></div>
-        <div class="gia">1.499.000đ</div>
+        <div class="gia"><s>1.499.000đ</s>1.049.000đ</div>
         <ul>
           <li>1 concept gia đình</li>
           <li>Makeup cho mẹ và bé gái</li>
@@ -325,33 +309,69 @@ a{color:inherit}
         <a class="nut nut-vien" href="https://m.me/simbastudiovn" target="_blank" rel="noopener">Giữ lịch gói này</a>
       </article>
       <article class="noi">
-        <span class="huy">Bán chạy</span>
+        <span class="huy">Bán chạy · −30%</span>
         <div class="ten"><h3>Family Plus</h3><span class="ai">Cho nhà có bé 3 tháng – 4 tuổi</span></div>
-        <div class="gia">2.199.000đ</div>
+        <div class="gia"><s>2.199.000đ</s>1.539.000đ</div>
         <ul>
           <li>1 concept riêng cho bé + 1 concept gia đình</li>
           <li>Makeup cho mẹ và bé gái</li>
           <li>10 ảnh chỉnh</li>
-          <li>2 ảnh gỗ 15×21 và 30×45</li>
+          <li>1 ảnh gỗ 15×21 và 1 ảnh gỗ 30×45</li>
           <li>Toàn bộ ảnh gốc JPG fullsize</li>
         </ul>
         <a class="nut nut-sang" href="https://m.me/simbastudiovn" target="_blank" rel="noopener">Giữ lịch gói này</a>
       </article>
       <article>
-        <div class="ten"><h3>Big Family</h3><span class="ai">Đại gia đình: ông bà, cô chú cùng chụp</span></div>
-        <div class="gia">4.999.000đ</div>
+        <span class="huy">−30% tháng này</span>
+        <div class="ten"><h3>Baby Advance</h3><span class="ai">Cho nhà có bé 3 tháng – 4 tuổi, muốn nhiều ảnh riêng của bé</span></div>
+        <div class="gia"><s>2.599.000đ</s>1.819.000đ</div>
         <ul>
-          <li>1 concept đại gia đình</li>
-          <li>Makeup 3 người lớn và bé gái</li>
+          <li>2 concept riêng cho bé + 1 concept gia đình nhỏ</li>
+          <li>Trang phục cho mỗi thành viên, 1 bộ mỗi concept</li>
+          <li>Makeup cho mẹ và bé gái</li>
           <li>15 ảnh chỉnh</li>
-          <li>1 ảnh gỗ 50×75 + 2 ảnh gỗ 20×30</li>
+          <li>1 ảnh gỗ 20×30 và 1 ảnh gỗ 30×45</li>
           <li>Toàn bộ ảnh gốc JPG fullsize</li>
         </ul>
         <a class="nut nut-vien" href="https://m.me/simbastudiovn" target="_blank" rel="noopener">Giữ lịch gói này</a>
       </article>
     </div>
     <div class="goi-ghi">
-      <span>Giá chưa gồm VAT 8% và phí ship ảnh. Chụp thứ Bảy, Chủ nhật có phụ thu nhỏ, Simba báo khi ba mẹ nhắn lịch.</span>
+      <span>Ưu đãi giảm 30% áp dụng cho cả 3 gói khi ba mẹ đặt lịch trong tháng 11/2026: Small Family 1.499.000đ còn 1.049.000đ, Family Plus 2.199.000đ còn 1.539.000đ, Baby Advance 2.599.000đ còn 1.819.000đ.</span>
+      <span>Giá chưa gồm VAT 8% và phí ship ảnh. Chụp thứ Bảy, Chủ nhật phụ thu 200.000đ cho mọi gói.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Gỡ băn khoăn (sau bảng giá) ============ -->
+<section class="khoi" id="thich-thu" data-aida="thich-thu">
+  <div class="wrap">
+    <div class="khoi-dau">
+      <span class="nhan">Chụp Noel cả nhà, có gì mà ngại?</span>
+      <h2>Bốn điều ba mẹ hay lo, nhà Simba lo sẵn</h2>
+      <p>Muốn có bộ ảnh Noel đẹp mà nghĩ tới chuyện sắm đồ, tìm góc chụp, lo bé còn nhỏ là đã thấy mệt. Simba gói gọn hết vào một buổi chụp.</p>
+    </div>
+    <div class="ngai">
+      <article>
+        <div class="lo"><i>Lo:</i> «Cả nhà lấy đâu ra đồ Noel đồng bộ?»</div>
+        <h3>Trang phục Noel cho cả nhà có sẵn</h3>
+        <p>Bố, mẹ và bé thay đồ ngay tại studio. Không phải đi sắm, không phải là ủi.</p>
+      </article>
+      <article>
+        <div class="lo"><i>Lo:</i> «Ở nhà chẳng có góc nào ra Noel»</div>
+        <h3>Bối cảnh Giáng sinh dựng sẵn</h3>
+        <p>Nơ đỏ khổng lồ, cây thông, hộp quà, gấu bông. Cả nhà chỉ việc bước vào khung hình.</p>
+      </article>
+      <article>
+        <div class="lo"><i>Lo:</i> «Bé còn nhỏ thế, chụp có được không?»</div>
+        <h3>Chụp bé là việc chính của Simba</h3>
+        <p>Simba có gói riêng cho bé sơ sinh và bé từ 3 tháng tới 4 tuổi, nên bé nhỏ mấy cũng chụp được.</p>
+      </article>
+      <article>
+        <div class="lo"><i>Lo:</i> «Chụp xong lại phát sinh thêm tiền»</div>
+        <h3>Giá trọn gói, biết trước</h3>
+        <p>Makeup, ảnh chỉnh, ảnh gỗ và toàn bộ ảnh gốc đã nằm trong giá gói. Chỉ cộng VAT 8% và phụ thu 200.000đ nếu chụp thứ Bảy, Chủ nhật.</p>
+      </article>
     </div>
   </div>
 </section>
@@ -361,9 +381,26 @@ a{color:inherit}
   <div class="wrap">
     <div class="hanh-chu">
       <span class="nhan" style="color:var(--gung)">Giữ lịch Noel</span>
-      <div class="dem"><b id="so-cuoi-tuan">7</b><h2>cuối tuần nữa là tới Noel</h2></div>
-      <p>Cuối tuần là lúc cả nhà cùng rảnh nên ai cũng muốn chụp vào thứ Bảy, Chủ nhật. Nhắn Simba sớm để chọn được ngày mình thích.</p>
-      <ul class="lich" id="ds-cuoi-tuan" aria-label="Các cuối tuần còn lại trước Noel"></ul>
+      <div class="dem"><b id="so-ngay">52</b><h2>ngày nữa là tới Noel</h2></div>
+      <p>Simba chụp Noel cả tuần, từ thứ Hai đến Chủ nhật. Ba mẹ sắp xếp được ngày thường thì cả nhà sẽ thoải mái hơn nhiều.</p>
+      <div class="ngay-chup">
+        <div class="goi-y">
+          <h3>Thứ Hai – Thứ Sáu <span>Simba gợi ý</span></h3>
+          <ul>
+            <li>Studio vắng, bé không phải chờ lượt</li>
+            <li>Không phụ thu cuối tuần</li>
+            <li>Nhiều khung giờ trống để chọn</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Thứ Bảy – Chủ nhật</h3>
+          <ul>
+            <li>Studio đông, có lúc phải chờ</li>
+            <li>Phụ thu 200.000đ</li>
+            <li>Nên nhắn sớm để giữ suất</li>
+          </ul>
+        </div>
+      </div>
       <div class="hanh-nut">
         <a class="nut nut-sang" href="https://m.me/simbastudiovn" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.36 2 2 6.13 2 11.7c0 2.91 1.19 5.44 3.14 7.17.16.14.26.35.27.57l.05 1.78a.8.8 0 0 0 1.12.7l1.98-.87a.8.8 0 0 1 .53-.04c.91.25 1.87.38 2.91.38 5.64 0 10-4.13 10-9.7S17.64 2 12 2Zm6 7.46-2.94 4.66a1.5 1.5 0 0 1-2.17.4l-2.34-1.75a.6.6 0 0 0-.72 0l-3.16 2.4c-.42.32-.97-.18-.69-.63l2.94-4.66a1.5 1.5 0 0 1 2.17-.4l2.34 1.75a.6.6 0 0 0 .72 0l3.16-2.4c.42-.32.97.18.69.63Z"/></svg>
@@ -373,7 +410,7 @@ a{color:inherit}
       </div>
       <div class="hotline">Hoặc gọi hotline <b id="sdt">096 144 82 46</b> <button class="chep" id="chep" type="button">Chép số</button></div>
       <ol class="buoc">
-        <li>Nhắn Simba ngày muốn chụp và gói đã chọn</li>
+        <li>Nhắn Simba ngày muốn chụp (ngày thường hay cuối tuần) và gói đã chọn</li>
         <li>Simba báo lịch trống, giữ suất cho nhà mình</li>
         <li>Cả nhà tới studio, phần còn lại để Simba lo</li>
       </ol>
@@ -413,27 +450,16 @@ a{color:inherit}
 
 <script>
 (function(){
-  // Đếm các cuối tuần còn lại trước Noel (25/12) tính từ hôm nay
+  // Đếm số ngày còn lại tới Noel (25/12) tính từ hôm nay
   var nay=new Date(); nay.setHours(0,0,0,0);
-  var nam=nay.getFullYear();
-  var noel=new Date(nam,11,25);
-  var ds=[], d=new Date(nay);
-  // lùi về thứ Bảy nếu hôm nay là Chủ nhật, để vẫn tính cuối tuần đang diễn ra
-  if(d.getDay()===0) d.setDate(d.getDate()-1);
-  while(d.getDay()!==6) d.setDate(d.getDate()+1);
-  while(d<noel){ ds.push(new Date(d)); d.setDate(d.getDate()+7); }
-  var o=document.getElementById('so-cuoi-tuan'), ul=document.getElementById('ds-cuoi-tuan');
-  if(ds.length===0){
+  var noel=new Date(nay.getFullYear(),11,25);
+  var con=Math.round((noel-nay)/864e5);
+  var o=document.getElementById('so-ngay');
+  if(con<=0){
     o.parentNode.querySelector('h2').textContent='Noel đã tới. Nhắn Simba để hẹn concept mùa tiếp theo';
     o.remove(); return;
   }
-  o.textContent=ds.length;
-  ds.forEach(function(t){
-    var cn=new Date(t); cn.setDate(cn.getDate()+1);
-    var li=document.createElement('li');
-    li.textContent=t.getDate()+(cn.getMonth()!==t.getMonth()?'/'+(t.getMonth()+1):'')+'–'+cn.getDate()+'/'+(cn.getMonth()+1);
-    ul.appendChild(li);
-  });
+  o.textContent=con;
 })();
 document.getElementById('chep').addEventListener('click',function(){
   var b=this, so='0961448246';
