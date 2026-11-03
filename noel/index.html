@@ -1,1 +1,484 @@
-tam
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Noel cả nhà Simba</title>
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://simbastudiovn.github.io/noel/">
+<meta property="og:title" content="Noel này, cả nhà mình có một bộ ảnh – chỉ từ 1.499.000đ">
+<meta property="og:description" content="Concept Giáng sinh dựng sẵn, trang phục Noel cho cả nhà, makeup, toàn bộ ảnh gốc fullsize. Simba Studio Hà Nội.">
+<meta property="og:image" content="https://simbastudiovn.github.io/noel/chia-se.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<link rel="icon" href="logo-den.png">
+<meta name="description" content="Chụp ảnh gia đình concept Giáng sinh tại Simba Studio Hà Nội, từ 1.499.000đ: concept dựng sẵn, makeup, trang phục Noel cho cả nhà, toàn bộ ảnh gốc fullsize.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Montserrat:wght@400;500;600;700&display=swap&subset=vietnamese">
+<style>
+/* Bố cục: album ảnh gia đình — nền kem như giấy album, ảnh viền kem, khối giá nâu cà phê; một trang dọc dắt khách qua 4 bước AIDA */
+:root{
+  --kem:#F7F2EA;        /* Kem ngà — nền chính */
+  --be:#C7BAA6;         /* Be lụa — khung, đường kẻ */
+  --be-nhat:#EFE7DA;
+  --nau:#6E4B36;        /* Nâu cà phê — nút, khối lớn */
+  --nau-dem:#2E211A;    /* Nâu đêm — nền tối */
+  --muc:#2B1F18;        /* Nâu mực — chữ */
+  --muc-nhat:#5B4A3E;
+  --gung:#D9A86F;       /* Vàng bánh gừng — điểm nhấn ≤10% */
+  --f-tieude:"Playfair Display", Georgia, "Times New Roman", serif;
+  --f-than:"Montserrat", "Helvetica Neue", Arial, sans-serif;
+  --r-nut:999px; --r-the:24px; --r-anh:16px;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{background:var(--kem);color:var(--muc);font-family:var(--f-than);font-size:16px;line-height:1.6}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--kem)}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--f-tieude);font-weight:600;text-wrap:balance;margin:0;line-height:1.18}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gung);outline-offset:3px}
+.nhan{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--nau)}
+
+/* Nút */
+.nut{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:var(--r-nut);font-weight:600;font-size:16px;text-decoration:none;transition:transform .15s ease, background .15s ease;border:2px solid transparent}
+.nut:hover{transform:translateY(-1px)}
+.nut-chinh{background:var(--nau);color:var(--kem)}
+.nut-chinh:hover{background:#5d3f2d}
+.nut-vien{border-color:var(--nau);color:var(--nau);background:transparent}
+.nut-sang{background:var(--kem);color:var(--nau-dem)}
+.nut-vien-sang{border-color:var(--be);color:var(--kem)}
+.nut svg{width:20px;height:20px;flex:none}
+
+/* Đầu trang */
+.dau{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(247,242,234,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--be-nhat)}
+.dau .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:10px}
+.dau img{height:34px;width:auto;display:block}
+.dau .nut{min-height:40px;padding:0 18px;font-size:14px}
+
+/* A — Thu hút */
+.hero{padding-block:40px 56px}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.hero-chu{display:grid;gap:22px;min-width:0}
+.hero h1{font-size:clamp(34px,5.2vw,58px);letter-spacing:-.01em}
+.hero h1 .gia{display:inline-block;font-style:italic;color:var(--nau);border-bottom:6px solid var(--gung);line-height:1.05}
+.hero-phu{font-size:17px;color:var(--muc-nhat);max-width:34em}
+.loi-ich{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 18px;margin:0;padding:0;list-style:none}
+.loi-ich li{display:flex;gap:10px;align-items:flex-start;font-weight:500;font-size:15px}
+.loi-ich li::before{content:"";flex:none;width:9px;height:9px;margin-top:8px;border-radius:50%;background:var(--gung);box-shadow:0 0 0 3px #f1dfc6}
+.hero-nut{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.hero-nut small{color:var(--muc-nhat);font-size:13px}
+.hero-anh{position:relative;margin:0}
+.hero-anh img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 40%;border-radius:var(--r-anh);border:10px solid #fff;box-shadow:0 24px 50px -24px rgba(46,33,26,.45)}
+.the-gia{position:absolute;left:-18px;bottom:28px;background:var(--nau-dem);color:var(--kem);border-radius:18px;padding:14px 18px;display:grid;gap:2px;box-shadow:0 14px 30px -14px rgba(0,0,0,.5)}
+.the-gia span{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gung);font-weight:600}
+.the-gia b{font-family:var(--f-tieude);font-size:26px;font-weight:700;font-variant-numeric:tabular-nums}
+.hero-anh figcaption{margin-top:10px;font-size:12px;color:var(--muc-nhat);text-align:right}
+
+/* Dải con số */
+.so{background:var(--nau);color:var(--kem)}
+.so .wrap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;padding-block:22px}
+.so div{display:grid;gap:2px;text-align:center}
+.so b{font-family:var(--f-tieude);font-size:28px;font-variant-numeric:tabular-nums}
+.so span{font-size:13px;opacity:.9}
+
+/* Khối chung */
+.khoi{padding-block:80px}
+.khoi-dau{display:grid;gap:12px;max-width:720px;margin-bottom:40px}
+.khoi-dau h2{font-size:clamp(28px,3.6vw,42px)}
+.khoi-dau p{color:var(--muc-nhat);font-size:17px}
+
+/* I — Thích thú: 4 nỗi ngại */
+.ngai{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.ngai article{background:#fff;border:1px solid var(--be-nhat);border-radius:var(--r-the);padding:26px;display:grid;gap:12px;align-content:start}
+.ngai .lo{font-size:14px;color:var(--muc-nhat);display:flex;gap:8px;align-items:baseline}
+.ngai .lo i{font-style:normal;font-weight:600;color:var(--nau);white-space:nowrap}
+.ngai h3{font-size:22px}
+.ngai p{color:var(--muc-nhat)}
+
+/* Bộ ảnh */
+.album{padding-block:0 80px}
+.album-luoi{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.album-luoi figure{margin:0;display:grid;gap:8px}
+.album-luoi img{width:100%;aspect-ratio:2/3;object-fit:cover;border-radius:12px;display:block;background:var(--be-nhat)}
+.album-luoi figure.to{grid-column:span 2;grid-row:span 2}
+.album-luoi figure.to img{aspect-ratio:auto;height:100%;min-height:0}
+.album-luoi figcaption{font-size:13px;color:var(--muc-nhat)}
+.album-luoi figure.to figcaption{display:none}
+.album-ghi{margin-top:18px;font-size:13px;color:var(--muc-nhat)}
+
+/* D — Khao khát: bảng gói */
+.goi-nen{background:var(--be-nhat)}
+.goi{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;align-items:stretch}
+.goi article{background:var(--kem);border:1px solid var(--be);border-radius:var(--r-the);padding:28px;display:flex;flex-direction:column;gap:18px;position:relative}
+.goi article.noi{background:var(--nau-dem);color:var(--kem);border-color:var(--nau-dem);box-shadow:0 30px 60px -30px rgba(46,33,26,.6)}
+.goi .ten{display:grid;gap:4px}
+.goi h3{font-size:26px}
+.goi .ai{font-size:14px;color:var(--muc-nhat)}
+.goi .noi .ai{color:var(--be)}
+.goi .gia{font-family:var(--f-tieude);font-size:36px;font-weight:700;font-variant-numeric:tabular-nums;line-height:1}
+.goi .gia small{font-family:var(--f-than);font-size:14px;font-weight:500;color:var(--muc-nhat)}
+.goi .noi .gia small{color:var(--be)}
+.goi ul{list-style:none;margin:0;padding:0;display:grid;gap:10px;flex:1}
+.goi li{display:flex;gap:10px;font-size:15px}
+.goi li::before{content:"✓";font-weight:700;color:var(--nau)}
+.goi .noi li::before{color:var(--gung)}
+.goi .huy{position:absolute;top:-13px;right:22px;background:var(--gung);color:var(--nau-dem);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:5px 12px;border-radius:999px}
+.goi .nut{width:100%}
+.goi-ghi{margin-top:24px;display:grid;gap:4px;font-size:14px;color:var(--muc-nhat)}
+
+/* A — Hành động */
+.hanh{background:var(--nau-dem);color:var(--kem);position:relative;overflow:hidden}
+.hanh .wrap{display:grid;grid-template-columns:1fr 340px;gap:48px;align-items:center;padding-block:80px}
+.hanh h2{font-size:clamp(30px,4vw,48px)}
+.hanh .dem{display:inline-flex;align-items:baseline;gap:10px;font-family:var(--f-tieude)}
+.hanh .dem b{font-size:clamp(64px,9vw,110px);line-height:.9;color:var(--gung);font-variant-numeric:tabular-nums}
+.hanh p{color:var(--be);font-size:17px;max-width:34em}
+.hanh-chu{display:grid;gap:20px;min-width:0}
+.lich{display:flex;flex-wrap:wrap;gap:6px;margin:0;padding:0;list-style:none}
+.lich li{font-size:13px;font-weight:600;padding:6px 10px;border-radius:10px;border:1px solid rgba(199,186,166,.4);color:var(--kem);font-variant-numeric:tabular-nums}
+.hanh-nut{display:flex;flex-wrap:wrap;gap:12px}
+.hotline{display:flex;flex-wrap:wrap;align-items:center;gap:10px;font-size:15px;color:var(--be)}
+.hotline b{color:var(--kem);font-size:20px;letter-spacing:.02em;user-select:all;font-variant-numeric:tabular-nums}
+.chep{background:transparent;border:1px solid var(--be);color:var(--kem);border-radius:999px;padding:6px 14px;font:600 13px var(--f-than);cursor:pointer}
+.hanh-anh{margin:0}
+.hanh-anh img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:var(--r-anh);border:8px solid var(--kem);display:block;transform:rotate(2deg)}
+.buoc{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:0;padding:0;list-style:none;counter-reset:b}
+.buoc li{counter-increment:b;font-size:14px;color:var(--be);display:grid;gap:4px;border-top:1px solid rgba(199,186,166,.35);padding-top:10px}
+.buoc li::before{content:"Bước " counter(b);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gung);font-weight:600}
+
+/* Chân trang */
+.chan{padding-block:40px 120px;font-size:14px;color:var(--muc-nhat)}
+.chan .wrap{display:grid;grid-template-columns:auto 1fr;gap:32px;align-items:start}
+.chan img{height:40px;width:auto}
+.coso{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.coso b{display:block;color:var(--muc);font-size:14px}
+
+/* Thanh đặt lịch dính dưới (điện thoại) */
+.thanh{position:fixed;left:0;right:0;bottom:0;z-index:25;background:rgba(46,33,26,.97);padding:10px max(16px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));display:none;gap:10px;align-items:center}
+.thanh .nut{flex:1;min-height:48px;font-size:15px}
+.thanh .nut-phu{flex:none;width:48px;padding:0;background:transparent;border-color:var(--be);color:var(--kem)}
+
+@media (max-width:900px){
+  .hero .wrap,.hanh .wrap{grid-template-columns:1fr;gap:32px}
+  .hero-anh{max-width:520px;margin-inline:auto;width:100%}
+  .goi{grid-template-columns:1fr;max-width:520px;margin-inline:auto}
+  .album-luoi{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .hanh-anh{display:none}
+  .chan .wrap{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  .hero{padding-block:20px 40px}
+  .hero-anh img{aspect-ratio:4/4.4}
+  .hero h1{font-size:34px}
+  .the-gia{left:12px;bottom:12px;padding:10px 14px}
+  .the-gia b{font-size:22px}
+  .loi-ich{grid-template-columns:1fr}
+  .so .wrap{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .khoi{padding-block:56px}
+  .ngai{grid-template-columns:1fr}
+  .buoc{grid-template-columns:1fr}
+  .coso{grid-template-columns:1fr}
+  .album-luoi figure:nth-child(n+8){display:none}
+  .thanh{display:flex}
+  .dau .nut{display:none}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+<style>:root{padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0}img{max-width:100%}</style>
+<style>
+/* Ô đồng ý dùng dữ liệu cho quảng cáo */
+.dongy{position:fixed;left:16px;right:16px;bottom:16px;z-index:26;max-width:560px;margin:0 auto;background:var(--kem);color:var(--muc);border:1px solid var(--be);border-radius:18px;box-shadow:0 10px 30px rgba(46,33,26,.25);padding:16px 18px;font-size:14px;line-height:1.55}
+.dongy[hidden]{display:none}
+.dongy p{margin:0 0 12px}
+.dongy a{color:var(--nau);font-weight:600}
+.dongy .hang{display:flex;gap:10px;flex-wrap:wrap}
+.dongy button{flex:1;min-height:44px;border-radius:999px;font:600 14px var(--f-than);cursor:pointer;border:1px solid var(--nau);padding:0 16px}
+#dongy-co{background:var(--nau);color:var(--kem)}
+#dongy-khong{background:transparent;color:var(--nau)}
+.rieng-tu{max-width:760px;margin:28px auto 0;font-size:13px;line-height:1.6;color:var(--muc-nhat)}
+.rieng-tu h3{font-family:var(--f-than);font-size:14px;font-weight:700;margin:0 0 6px;color:var(--muc)}
+.rieng-tu p{margin:0 0 8px}
+.rieng-tu button{background:none;border:0;padding:0;color:var(--nau);font:600 13px var(--f-than);text-decoration:underline;cursor:pointer}
+@media (max-width:640px){.dongy{left:12px;right:12px;bottom:calc(80px + env(safe-area-inset-bottom,0px))}}
+</style>
+</head>
+<body>
+<header class="dau">
+  <div class="wrap">
+    <img src="logo-den.png" alt="Simba Studio">
+    <a class="nut nut-chinh" href="https://m.me/simbastudiovn" target="_blank" rel="noopener">Nhắn Simba giữ lịch</a>
+  </div>
+</header>
+
+<main>
+<!-- ============ A1 · THU HÚT ============ -->
+<section class="hero" id="thu-hut" data-aida="thu-hut">
+  <div class="wrap">
+    <div class="hero-chu">
+      <span class="nhan">Concept Giáng sinh · Simba Studio Hà Nội</span>
+      <h1>Noel này, cả nhà mình có một bộ ảnh – chỉ từ <span class="gia">1.499.000đ</span></h1>
+      <p class="hero-phu">Ba mẹ chỉ cần dắt bé tới. Bối cảnh Noel, trang phục, makeup và ảnh gỗ treo tường, nhà Simba đã chuẩn bị sẵn hết.</p>
+      <ul class="loi-ich">
+        <li>Concept Giáng sinh dựng sẵn</li>
+        <li>Trang phục Noel cho cả nhà</li>
+        <li>Makeup cho mẹ và bé gái</li>
+        <li>Toàn bộ ảnh gốc JPG fullsize</li>
+      </ul>
+      <div class="hero-nut">
+        <a class="nut nut-chinh" href="https://m.me/simbastudiovn" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.36 2 2 6.13 2 11.7c0 2.91 1.19 5.44 3.14 7.17.16.14.26.35.27.57l.05 1.78a.8.8 0 0 0 1.12.7l1.98-.87a.8.8 0 0 1 .53-.04c.91.25 1.87.38 2.91.38 5.64 0 10-4.13 10-9.7S17.64 2 12 2Zm6 7.46-2.94 4.66a1.5 1.5 0 0 1-2.17.4l-2.34-1.75a.6.6 0 0 0-.72 0l-3.16 2.4c-.42.32-.97-.18-.69-.63l2.94-4.66a1.5 1.5 0 0 1 2.17-.4l2.34 1.75a.6.6 0 0 0 .72 0l3.16-2.4c.42-.32.97.18.69.63Z"/></svg>
+          Nhắn Simba giữ lịch Noel
+        </a>
+        <small>Simba báo lịch trống qua Messenger</small>
+      </div>
+    </div>
+    <figure class="hero-anh">
+      <img src="noel-ca-nha-cuoi.jpg" alt="Bố mẹ và bé gái mặc áo len đỏ, ngồi trước chiếc nơ đỏ khổng lồ trong concept Giáng sinh của Simba Studio" fetchpriority="high">
+      <div class="the-gia"><span>Gói Small Family</span><b>1.499.000đ</b></div>
+      <figcaption>Ảnh thật của khách nhà Simba · concept Noel 2026</figcaption>
+    </figure>
+  </div>
+</section>
+
+<div class="so" data-aida="thu-hut">
+  <div class="wrap">
+    <div><b>1.499.000đ</b><span>giá gói gia đình nhỏ</span></div>
+    <div><b>8 ảnh</b><span>chỉnh kỹ, ảnh gốc giao hết</span></div>
+    <div><b>40×60</b><span>ảnh gỗ treo tường kèm trong gói</span></div>
+    <div><b>Mọi gói</b><span>đều chọn được concept Noel</span></div>
+  </div>
+</div>
+
+<!-- ============ I · THÍCH THÚ ============ -->
+<section class="khoi" id="thich-thu" data-aida="thich-thu">
+  <div class="wrap">
+    <div class="khoi-dau">
+      <span class="nhan">Chụp Noel cả nhà, có gì mà ngại?</span>
+      <h2>Bốn điều ba mẹ hay lo, nhà Simba lo sẵn</h2>
+      <p>Muốn có bộ ảnh Noel đẹp mà nghĩ tới chuyện sắm đồ, tìm góc chụp, lo bé còn nhỏ là đã thấy mệt. Simba gói gọn hết vào một buổi chụp.</p>
+    </div>
+    <div class="ngai">
+      <article>
+        <div class="lo"><i>Lo:</i> «Cả nhà lấy đâu ra đồ Noel đồng bộ?»</div>
+        <h3>Trang phục Noel cho cả nhà có sẵn</h3>
+        <p>Bố, mẹ và bé thay đồ ngay tại studio. Không phải đi sắm, không phải là ủi.</p>
+      </article>
+      <article>
+        <div class="lo"><i>Lo:</i> «Ở nhà chẳng có góc nào ra Noel»</div>
+        <h3>Bối cảnh Giáng sinh dựng sẵn</h3>
+        <p>Nơ đỏ khổng lồ, cây thông, hộp quà, gấu bông. Cả nhà chỉ việc bước vào khung hình.</p>
+      </article>
+      <article>
+        <div class="lo"><i>Lo:</i> «Bé còn nhỏ thế, chụp có được không?»</div>
+        <h3>Chụp bé là việc chính của Simba</h3>
+        <p>Simba có gói riêng cho bé sơ sinh và bé từ 3 tháng tới 4 tuổi, nên bé nhỏ mấy cũng chụp được.</p>
+      </article>
+      <article>
+        <div class="lo"><i>Lo:</i> «Chụp xong lại phát sinh thêm tiền»</div>
+        <h3>Giá trọn gói, biết trước</h3>
+        <p>Makeup, ảnh chỉnh, ảnh gỗ và toàn bộ ảnh gốc đã nằm trong giá gói. Chỉ cộng VAT 8% và phụ thu nhỏ nếu chụp cuối tuần.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="album" data-aida="thich-thu" aria-label="Bộ ảnh Noel ở Simba">
+  <div class="wrap">
+    <div class="album-luoi">
+      <figure class="to"><img src="noel-bo-hon-be.jpg" alt="Bố hôn má bé gái mặc váy len đỏ, mẹ ngồi cạnh, nền nơ đỏ concept Noel" loading="lazy"><figcaption>Cả nhà</figcaption></figure>
+      <figure><img src="noel-ca-nha-dung.jpg" alt="Bố mẹ đứng phía sau, bé gái mặc váy cây thông đứng trước" loading="lazy"><figcaption>Cả nhà · nơ đỏ</figcaption></figure>
+      <figure><img src="noel-me-be.jpg" alt="Mẹ và bé gái mặc đồ đỏ ngồi cạnh cây thông nhỏ" loading="lazy"><figcaption>Mẹ và bé</figcaption></figure>
+      <figure><img src="noel-be-cay-thong.jpg" alt="Bé gái ngồi trên trống đỏ trắng cạnh cây thông Noel lớn" loading="lazy"><figcaption>Bé · cây thông</figcaption></figure>
+      <figure><img src="noel-be-chu-he.jpg" alt="Bé trai đội mũ chú hề cười tươi giữa bánh gừng và người tuyết" loading="lazy"><figcaption>Bé · bánh gừng</figcaption></figure>
+      <figure><img src="noel-be-gau-bong.jpg" alt="Bé gái mặc áo len sọc, đội mũ len, cạnh gấu bông" loading="lazy"><figcaption>Bé · áo len</figcaption></figure>
+      <figure><img src="noel-be-khan-ca-ro.jpg" alt="Bé gái đội mũ len xanh nằm giữa quả châu Noel" loading="lazy"><figcaption>Bé · quả châu</figcaption></figure>
+      <figure><img src="noel-be-qua.jpg" alt="Bé gái ôm gấu bông ngồi trên trống đỏ trắng cạnh cây thông" loading="lazy"><figcaption>Bé · gấu bông</figcaption></figure>
+      <figure><img src="noel-be-ca-ro-2.jpg" alt="Bé gái đội mũ len xanh, chống cằm nhìn ống kính" loading="lazy"><figcaption>Bé · mũ len</figcaption></figure>
+    </div>
+    <p class="album-ghi">Toàn bộ là ảnh thật trên fanpage Simba Studio, tháng 10–11/2026.</p>
+  </div>
+</section>
+
+<!-- ============ D · KHAO KHÁT ============ -->
+<section class="khoi goi-nen" id="khao-khat" data-aida="khao-khat">
+  <div class="wrap">
+    <div class="khoi-dau">
+      <span class="nhan">Bảng giá gói gia đình</span>
+      <h2>Chọn gói hợp với nhà mình</h2>
+      <p>Gói nào cũng chụp được concept Noel và giao toàn bộ ảnh gốc fullsize, đủ để in lịch, làm thiệp hay gửi ông bà.</p>
+    </div>
+    <div class="goi">
+      <article>
+        <div class="ten"><h3>Small Family</h3><span class="ai">Gia đình nhỏ: tối đa 2 người lớn và các bé</span></div>
+        <div class="gia">1.499.000đ</div>
+        <ul>
+          <li>1 concept gia đình</li>
+          <li>Makeup cho mẹ và bé gái</li>
+          <li>8 ảnh chỉnh</li>
+          <li>1 ảnh gỗ 40×60</li>
+          <li>Toàn bộ ảnh gốc JPG fullsize</li>
+        </ul>
+        <a class="nut nut-vien" href="https://m.me/simbastudiovn" target="_blank" rel="noopener">Giữ lịch gói này</a>
+      </article>
+      <article class="noi">
+        <span class="huy">Bán chạy</span>
+        <div class="ten"><h3>Family Plus</h3><span class="ai">Cho nhà có bé 3 tháng – 4 tuổi</span></div>
+        <div class="gia">2.199.000đ</div>
+        <ul>
+          <li>1 concept riêng cho bé + 1 concept gia đình</li>
+          <li>Makeup cho mẹ và bé gái</li>
+          <li>10 ảnh chỉnh</li>
+          <li>2 ảnh gỗ 15×21 và 30×45</li>
+          <li>Toàn bộ ảnh gốc JPG fullsize</li>
+        </ul>
+        <a class="nut nut-sang" href="https://m.me/simbastudiovn" target="_blank" rel="noopener">Giữ lịch gói này</a>
+      </article>
+      <article>
+        <div class="ten"><h3>Big Family</h3><span class="ai">Đại gia đình: ông bà, cô chú cùng chụp</span></div>
+        <div class="gia">4.999.000đ</div>
+        <ul>
+          <li>1 concept đại gia đình</li>
+          <li>Makeup 3 người lớn và bé gái</li>
+          <li>15 ảnh chỉnh</li>
+          <li>1 ảnh gỗ 50×75 + 2 ảnh gỗ 20×30</li>
+          <li>Toàn bộ ảnh gốc JPG fullsize</li>
+        </ul>
+        <a class="nut nut-vien" href="https://m.me/simbastudiovn" target="_blank" rel="noopener">Giữ lịch gói này</a>
+      </article>
+    </div>
+    <div class="goi-ghi">
+      <span>Giá chưa gồm VAT 8% và phí ship ảnh. Chụp thứ Bảy, Chủ nhật có phụ thu nhỏ, Simba báo khi ba mẹ nhắn lịch.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ A2 · HÀNH ĐỘNG ============ -->
+<section class="hanh" id="hanh-dong" data-aida="hanh-dong">
+  <div class="wrap">
+    <div class="hanh-chu">
+      <span class="nhan" style="color:var(--gung)">Giữ lịch Noel</span>
+      <div class="dem"><b id="so-cuoi-tuan">7</b><h2>cuối tuần nữa là tới Noel</h2></div>
+      <p>Cuối tuần là lúc cả nhà cùng rảnh nên ai cũng muốn chụp vào thứ Bảy, Chủ nhật. Nhắn Simba sớm để chọn được ngày mình thích.</p>
+      <ul class="lich" id="ds-cuoi-tuan" aria-label="Các cuối tuần còn lại trước Noel"></ul>
+      <div class="hanh-nut">
+        <a class="nut nut-sang" href="https://m.me/simbastudiovn" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.36 2 2 6.13 2 11.7c0 2.91 1.19 5.44 3.14 7.17.16.14.26.35.27.57l.05 1.78a.8.8 0 0 0 1.12.7l1.98-.87a.8.8 0 0 1 .53-.04c.91.25 1.87.38 2.91.38 5.64 0 10-4.13 10-9.7S17.64 2 12 2Zm6 7.46-2.94 4.66a1.5 1.5 0 0 1-2.17.4l-2.34-1.75a.6.6 0 0 0-.72 0l-3.16 2.4c-.42.32-.97-.18-.69-.63l2.94-4.66a1.5 1.5 0 0 1 2.17-.4l2.34 1.75a.6.6 0 0 0 .72 0l3.16-2.4c.42-.32.97.18.69.63Z"/></svg>
+          Nhắn Simba giữ lịch Noel
+        </a>
+        <a class="nut nut-vien-sang" href="https://zalo.me/0961448246" target="_blank" rel="noopener">Nhắn Zalo</a>
+      </div>
+      <div class="hotline">Hoặc gọi hotline <b id="sdt">096 144 82 46</b> <button class="chep" id="chep" type="button">Chép số</button></div>
+      <ol class="buoc">
+        <li>Nhắn Simba ngày muốn chụp và gói đã chọn</li>
+        <li>Simba báo lịch trống, giữ suất cho nhà mình</li>
+        <li>Cả nhà tới studio, phần còn lại để Simba lo</li>
+      </ol>
+    </div>
+    <figure class="hanh-anh"><img src="noel-bo-be.jpg" alt="Bố ôm bé gái mặc đồ đỏ trong concept nơ đỏ" loading="lazy"></figure>
+  </div>
+</section>
+</main>
+
+<footer class="chan">
+  <div class="wrap">
+    <img src="logo-den.png" alt="Simba Studio">
+    <div class="coso">
+      <div><b>Cơ sở 1 · Hà Nội</b>Số 22 ngõ 109 Ô Đồng Lầm, Văn Miếu – Quốc Tử Giám</div>
+      <div><b>Cơ sở 2 · Hà Nội</b>Số 143 Lâm Hạ, Bồ Đề, Long Biên</div>
+      <div><b>Maison de Bébé · TP.HCM</b>315/20 Trường Chinh, Tân Bình</div>
+    </div>
+    <div class="rieng-tu" id="rieng-tu">
+      <h3>Dữ liệu và quyền riêng tư</h3>
+      <p><b>Thu gì:</b> khi ba mẹ bấm «Đồng ý», trang này dùng Meta Pixel ghi nhận lượt xem trang và lượt bấm nút nhắn Messenger, Zalo hoặc chép số hotline. Simba không thu tên, số điện thoại hay email qua trang này.</p>
+      <p><b>Để làm gì:</b> chỉ để đo hiệu quả quảng cáo và cho quảng cáo tới đúng người hơn. Việc này tách riêng với việc ba mẹ nhắn tin để được tư vấn.</p>
+      <p><b>Gửi cho ai:</b> Meta (Facebook, Instagram). Meta lưu dữ liệu này theo chính sách của Meta; Simba không tự lưu.</p>
+      <p><b>Rút lại đồng ý:</b> bất cứ lúc nào, <button type="button" id="doi-lua-chon">bấm vào đây để đổi lựa chọn</button>.</p>
+    </div>
+  </div>
+</footer>
+
+<div class="dongy" id="dongy" role="dialog" aria-label="Đồng ý dùng dữ liệu cho quảng cáo" hidden>
+  <p>Simba dùng mã đo của Facebook (Meta Pixel) để biết quảng cáo nào giúp ba mẹ tìm tới Simba. Mã chỉ ghi nhận lượt xem trang và lượt bấm nút nhắn tin, không lấy tên hay số điện thoại của ba mẹ. <a href="#rieng-tu">Tìm hiểu thêm</a></p>
+  <div class="hang"><button type="button" id="dongy-co">Đồng ý</button><button type="button" id="dongy-khong">Không đồng ý</button></div>
+</div>
+
+<div class="thanh" data-aida="hanh-dong">
+  <a class="nut nut-sang" href="https://m.me/simbastudiovn" target="_blank" rel="noopener">Nhắn Simba giữ lịch Noel</a>
+  <a class="nut nut-phu" href="https://zalo.me/0961448246" target="_blank" rel="noopener" aria-label="Nhắn Zalo">Zalo</a>
+</div>
+
+<script>
+(function(){
+  // Đếm các cuối tuần còn lại trước Noel (25/12) tính từ hôm nay
+  var nay=new Date(); nay.setHours(0,0,0,0);
+  var nam=nay.getFullYear();
+  var noel=new Date(nam,11,25);
+  var ds=[], d=new Date(nay);
+  // lùi về thứ Bảy nếu hôm nay là Chủ nhật, để vẫn tính cuối tuần đang diễn ra
+  if(d.getDay()===0) d.setDate(d.getDate()-1);
+  while(d.getDay()!==6) d.setDate(d.getDate()+1);
+  while(d<noel){ ds.push(new Date(d)); d.setDate(d.getDate()+7); }
+  var o=document.getElementById('so-cuoi-tuan'), ul=document.getElementById('ds-cuoi-tuan');
+  if(ds.length===0){
+    o.parentNode.querySelector('h2').textContent='Noel đã tới. Nhắn Simba để hẹn concept mùa tiếp theo';
+    o.remove(); return;
+  }
+  o.textContent=ds.length;
+  ds.forEach(function(t){
+    var cn=new Date(t); cn.setDate(cn.getDate()+1);
+    var li=document.createElement('li');
+    li.textContent=t.getDate()+(cn.getMonth()!==t.getMonth()?'/'+(t.getMonth()+1):'')+'–'+cn.getDate()+'/'+(cn.getMonth()+1);
+    ul.appendChild(li);
+  });
+})();
+document.getElementById('chep').addEventListener('click',function(){
+  var b=this, so='0961448246';
+  function xong(){b.textContent='Đã chép';setTimeout(function(){b.textContent='Chép số';},2000);}
+  try{navigator.clipboard.writeText(so).then(xong,function(){chon();});}catch(e){chon();}
+  function chon(){var r=document.createRange();r.selectNodeContents(document.getElementById('sdt'));var s=getSelection();s.removeAllRanges();s.addRange(r);}
+});
+</script>
+<script>
+/* Đồng ý dữ liệu + Meta Pixel. Pixel CHỈ nạp sau khi khách bấm «Đồng ý». */
+(function(){
+  var PIXEL='1484235393619822', KHOA='simba-dongy-du-lieu';
+  var hop=document.getElementById('dongy');
+  function doc(){try{return localStorage.getItem(KHOA)}catch(e){return null}}
+  function ghi(v){try{localStorage.setItem(KHOA,v+'|'+new Date().toISOString())}catch(e){}}
+  function xoa(){try{localStorage.removeItem(KHOA)}catch(e){}}
+  function daDongY(){return (doc()||'').indexOf('co|')===0}
+  function napPixel(){
+    if(window.fbq) return;
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window,document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init',PIXEL);
+    fbq('track','PageView');
+  }
+  function maSuKien(){
+    try{return crypto.randomUUID()}catch(e){return Date.now()+'-'+Math.random().toString(36).slice(2)}
+  }
+  if(daDongY()) napPixel(); else if(!doc()) hop.hidden=false;
+  document.getElementById('dongy-co').addEventListener('click',function(){ghi('co');hop.hidden=true;napPixel();});
+  document.getElementById('dongy-khong').addEventListener('click',function(){ghi('khong');hop.hidden=true;});
+  document.getElementById('doi-lua-chon').addEventListener('click',function(){
+    if(window.fbq) fbq('consent','revoke');
+    xoa();hop.hidden=false;
+  });
+  // Bấm nhắn tin = một lượt «Contact». Mỗi lần bấm một mã sự kiện riêng.
+  document.addEventListener('click',function(e){
+    var a=e.target.closest('a[href^="https://m.me/"],a[href^="https://zalo.me/"],#chep');
+    if(!a||!daDongY()||!window.fbq) return;
+    var kenh=a.id==='chep'?'hotline':(a.href.indexOf('zalo.me')>=0?'zalo':'messenger');
+    fbq('track','Contact',{content_name:kenh},{eventID:maSuKien()});
+  });
+})();
+</script>
+</body>
+</html>
