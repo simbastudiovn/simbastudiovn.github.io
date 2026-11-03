@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Thử nút Messenger</title>
+<style>
+/* Trang thử nội bộ: không gắn Pixel, không dẫn từ landing. */
+:root{--kem:#F7F2EA;--nau:#6E4B36;--muc:#2B1F18;--be:#C7BAA6;--xanh:#2f6b4f;--do:#b23a2e}
+*{box-sizing:border-box}
+body{margin:0;background:var(--kem);color:var(--muc);font:16px/1.55 -apple-system,"Segoe UI",Roboto,sans-serif}
+.w{max-width:520px;margin:0 auto;padding:20px 16px 48px}
+h1{font-size:22px;margin:0 0 6px}
+.mut{color:#5B4A3E;font-size:14px}
+.may{background:#fff;border:1px solid var(--be);border-radius:12px;padding:10px 12px;font-size:13px;margin:14px 0;word-break:break-word}
+.the{background:#fff;border:1px solid var(--be);border-radius:16px;padding:14px;margin:14px 0}
+.the h2{font-size:17px;margin:0 0 4px}
+.nut{display:block;width:100%;min-height:52px;margin-top:10px;border:0;border-radius:999px;background:var(--nau);color:var(--kem);font:600 16px inherit;cursor:pointer}
+.kq{font-size:14px;margin-top:8px;min-height:20px}
+.kq.ok{color:var(--xanh)}.kq.loi{color:var(--do)}
+</style>
+</head>
+<body><div class="w">
+<h1>Thử nút nhắn Messenger</h1>
+<p class="mut">Bấm lần lượt từng nút. Với mỗi nút, ghi lại: <b>vào thẳng khung chat Simba</b>, <b>hỏi «Mở trong Messenger?»</b>, hay <b>ra trang m.facebook.com</b>. Xong bấm quay lại trang này để thử nút tiếp theo.</p>
+<div class="may" id="may"></div>
+
+<div class="the"><h2>Nút A · đang dùng trên landing</h2><p class="mut">Đường dẫn m.me thông thường, để so sánh.</p>
+<button class="nut" data-kieu="A">Nhắn Simba (A)</button><div class="kq" id="kq-A"></div></div>
+
+<div class="the"><h2>Nút B · gọi thẳng app (kiểu 1)</h2><p class="mut">Mở app Messenger tới khung chat Trang. Sau 1,5 giây không mở được thì tự quay về nút A.</p>
+<button class="nut" data-kieu="B">Nhắn Simba (B)</button><div class="kq" id="kq-B"></div></div>
+
+<div class="the"><h2>Nút C · gọi thẳng app (kiểu 2)</h2><p class="mut">Cách viết đường dẫn khác của app Messenger. Cũng tự quay về nút A nếu không mở được.</p>
+<button class="nut" data-kieu="C">Nhắn Simba (C)</button><div class="kq" id="kq-C"></div></div>
+
+<div class="the"><h2>Nút D · chỉ dành cho Android</h2><p class="mut">Cách gọi app riêng của Android. Trên iPhone nút này sẽ tự dùng nút A.</p>
+<button class="nut" data-kieu="D">Nhắn Simba (D)</button><div class="kq" id="kq-D"></div></div>
+</div>
+<script>
+(function(){
+  var TRANG='449534255232300';               // Trang facebook.com/simbastudiovn
+  var MME='https://m.me/simbastudiovn';
+  var ua=navigator.userAgent, android=/Android/i.test(ua), ios=/iPhone|iPad|iPod/i.test(ua);
+  var app=/FBAN|FBAV|FB_IAB/.test(ua)?'trong app Facebook':(/Instagram/.test(ua)?'trong app Instagram':(/Zalo/i.test(ua)?'trong app Zalo':'trình duyệt thường'));
+  document.getElementById('may').textContent='Máy của anh: '+(ios?'iPhone/iPad':(android?'Android':'máy tính'))+' · đang mở '+app+'.';
+  var DUONG={
+    A:MME,
+    B:'fb-messenger://user-thread/'+TRANG,
+    C:'fb-messenger://user/'+TRANG,
+    D:android?'intent://user/'+TRANG+'/#Intent;scheme=fb-messenger;package=com.facebook.orca;S.browser_fallback_url='+encodeURIComponent(MME)+';end':MME
+  };
+  var hen=null, dangThu=null;
+  function huy(){ if(hen){clearTimeout(hen);hen=null;} }
+  document.addEventListener('visibilitychange',function(){
+    if(document.hidden&&dangThu){ huy(); var o=document.getElementById('kq-'+dangThu); o.className='kq ok'; o.textContent='Đã rời trang để mở app (nút '+dangThu+').'; }
+  });
+  window.addEventListener('pagehide',huy);
+  document.querySelectorAll('[data-kieu]').forEach(function(b){
+    b.addEventListener('click',function(){
+      var k=b.getAttribute('data-kieu'), o=document.getElementById('kq-'+k);
+      huy(); dangThu=k; o.className='kq'; o.textContent='Đang mở…';
+      if(k==='B'||k==='C'){
+        hen=setTimeout(function(){
+          if(!document.hidden){ o.className='kq loi'; o.textContent='Không mở được app, đã quay về cách A.'; location.href=MME; }
+        },1500);
+      }
+      location.href=DUONG[k];
+    });
+  });
+})();
+</script>
+</body>
+</html>
