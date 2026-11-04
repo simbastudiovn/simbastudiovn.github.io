@@ -469,16 +469,16 @@ a{color:inherit}
     </div>
     <div class="rieng-tu" id="rieng-tu">
       <h3>Dữ liệu và quyền riêng tư</h3>
-      <p><b>Thu gì:</b> khi ba mẹ bấm «Đồng ý», trang này dùng Meta Pixel ghi nhận lượt xem trang và lượt bấm nút nhắn Messenger, Zalo hoặc chép số hotline. Simba không thu tên, số điện thoại hay email qua trang này.</p>
-      <p><b>Để làm gì:</b> chỉ để đo hiệu quả quảng cáo và cho quảng cáo tới đúng người hơn. Việc này tách riêng với việc ba mẹ nhắn tin để được tư vấn.</p>
-      <p><b>Gửi cho ai:</b> Meta (Facebook, Instagram). Meta lưu dữ liệu này theo chính sách của Meta; Simba không tự lưu.</p>
+      <p><b>Thu gì:</b> với mọi lượt vào, trang đếm ẩn danh bằng PostHog: lượt xem, chỗ bấm, độ cuộn và lượt bấm nút liên hệ, không dùng cookie và không nhận diện ba mẹ là ai. Khi ba mẹ bấm «Đồng ý», trang dùng thêm Meta Pixel ghi nhận lượt xem trang, lượt bấm nút nhắn Messenger, Zalo hoặc chép số hotline, và Microsoft Clarity ghi lại thao tác cuộn, bấm trên trang. Simba không thu tên, số điện thoại hay email qua trang này.</p>
+      <p><b>Để làm gì:</b> chỉ để cải thiện trang, đo hiệu quả quảng cáo và cho quảng cáo tới đúng người hơn. Việc này tách riêng với việc ba mẹ nhắn tin để được tư vấn.</p>
+      <p><b>Gửi cho ai:</b> PostHog, Microsoft và Meta (Facebook, Instagram). Mỗi bên lưu dữ liệu này theo chính sách của mình.</p>
       <p><b>Rút lại đồng ý:</b> bất cứ lúc nào, <button type="button" id="doi-lua-chon">bấm vào đây để đổi lựa chọn</button>.</p>
     </div>
   </div>
 </footer>
 
 <div class="dongy" id="dongy" role="dialog" aria-label="Đồng ý dùng dữ liệu cho quảng cáo" hidden>
-  <p>Simba dùng mã đo của Facebook (Meta Pixel) để biết quảng cáo nào giúp ba mẹ tìm tới Simba. Mã chỉ ghi nhận lượt xem trang và lượt bấm nút nhắn tin, không lấy tên hay số điện thoại của ba mẹ. <a href="#rieng-tu">Tìm hiểu thêm</a></p>
+  <p>Simba dùng mã đo của Facebook (Meta Pixel) và Microsoft Clarity để biết quảng cáo nào giúp ba mẹ tìm tới Simba và trang dễ dùng tới đâu. Mã chỉ ghi nhận lượt xem trang, thao tác cuộn, bấm trên trang, không lấy tên hay số điện thoại của ba mẹ. <a href="#rieng-tu">Tìm hiểu thêm</a></p>
   <div class="hang"><button type="button" id="dongy-co">Đồng ý</button><button type="button" id="dongy-khong">Không đồng ý</button></div>
 </div>
 
@@ -508,6 +508,13 @@ document.getElementById('chep').addEventListener('click',function(){
 });
 </script>
 <script>
+/* Đếm ẩn danh bằng PostHog: không cookie, không nhận diện khách, không quay lại phiên xem. */
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],Object.defineProperty(u,"toString",{configurable:!0,enumerable:!0,writable:!0,value:function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e}}),Object.defineProperty(u.people,"toString",{configurable:!0,enumerable:!0,writable:!0,value:function(){return u.toString(1)+".people (stub)"}}),o="init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagResult isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey getNextSurveyStep identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+var MAU_QC='';try{MAU_QC=new URLSearchParams(location.search).get('utm_content')||''}catch(e){}
+posthog.init('phc_A8PyAFn99WQ77bnP7knZ3dXitTb5DcnfwTgyh68zDiLk',{api_host:'https://us.i.posthog.com',defaults:'2026-08-30',cookieless_mode:'always',disable_session_recording:true,autocapture:false,capture_heatmaps:true,capture_pageview:true,capture_pageleave:true,disable_surveys:true,advanced_disable_feature_flags:true});
+posthog.register({mau:MAU_QC});
+</script>
+<script>
 /* Đồng ý dữ liệu + Meta Pixel. Pixel CHỈ nạp sau khi khách bấm «Đồng ý». */
 (function(){
   var PIXEL='1484235393619822', KHOA='simba-dongy-du-lieu';
@@ -528,15 +535,27 @@ document.getElementById('chep').addEventListener('click',function(){
     fbq('init',PIXEL);
     fbq('track','PageView');
   }
+  function napClarity(){
+    if(window.clarity) return;
+    (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","z85oe0x5bh");
+    clarity('consentv2',{ad_Storage:'denied',analytics_Storage:'granted'});
+  }
   function maSuKien(){
     try{return crypto.randomUUID()}catch(e){return Date.now()+'-'+Math.random().toString(36).slice(2)}
   }
-  if(daDongY()) napPixel(); else if(!doc()) hop.hidden=false;
-  document.getElementById('dongy-co').addEventListener('click',function(){ghi('co');hop.hidden=true;napPixel();});
+  if(daDongY()){napPixel();napClarity();} else if(!doc()) hop.hidden=false;
+  document.getElementById('dongy-co').addEventListener('click',function(){ghi('co');hop.hidden=true;napPixel();napClarity();});
   document.getElementById('dongy-khong').addEventListener('click',function(){ghi('khong');hop.hidden=true;});
   document.getElementById('doi-lua-chon').addEventListener('click',function(){
     if(window.fbq) fbq('consent','revoke');
+    if(window.clarity) clarity('consentv2',{ad_Storage:'denied',analytics_Storage:'denied'});
     xoa();hop.hidden=false;
+  });
+  // Đếm ẩn danh mỗi lượt bấm liên hệ (không kèm thông tin khách), không phụ thuộc Pixel.
+  document.addEventListener('click',function(e){
+    var a=e.target.closest('a[href^="https://m.me/"],a[href^="https://zalo.me/"],#chep');
+    if(!a||!window.posthog) return;
+    posthog.capture('lien_he',{kenh:a.id==='chep'?'chep_so':(a.href.indexOf('zalo.me')>=0?'zalo':'messenger')});
   });
   // Bấm nhắn tin = một lượt «Contact». Mỗi lần bấm một mã sự kiện riêng.
   document.addEventListener('click',function(e){
